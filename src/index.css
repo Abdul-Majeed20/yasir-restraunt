@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Modern Font Stack */
+  --font-base: 'Playfair Display', serif;
+  --font-alt: 'Inter', sans-serif;
+  --font-accent: 'Space Grotesk', monospace;
+  
+  /* New Color Scheme - Modern Dark & Teal Theme */
+  --color-primary: #0A192F;      /* Deep navy */
+  --color-secondary: #64FFDA;     /* Mint teal */
+  --color-accent: #FF6B6B;        /* Coral accent */
+  --color-dark: #020C1B;          /* Almost black blue */
+  --color-gray: #8892B0;          /* Cool gray */
+  --color-light-gray: #CCD6F6;    /* Light blue-gray */
+  --color-white: #E6F1FF;         /* Off-white with blue tint */
+  --color-golden: #64FFDA;        /* Replacing golden with teal */
+  --color-black: #0A192F;         /* Deep navy as black */
+  --color-crimson: #1E2A3A;       /* Dark navy instead of cream */
+  --color-grey: #8892B0;          /* Cool gray */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-primary);
+  font-family: var(--font-alt);
+  color: var(--color-white);
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Modern Animations */
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Selection Color */
+::selection {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
